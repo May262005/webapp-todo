@@ -63,5 +63,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ API To-Do escuchando en http://0.0.0.0:${PORT}`);
+  console.log(`🚀 API To-Do v2 (CI/CD) escuchando en http://0.0.0.0:${PORT}`);
 });
