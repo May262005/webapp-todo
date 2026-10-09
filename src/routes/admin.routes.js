@@ -61,4 +61,14 @@ router.get('/status', (req, res) => {
   }));
 });
 
+// 13. GET hora del servidor (endpoint de prueba CI/CD)
+router.get('/hora', (req, res) => {
+  res.json(ok({
+    hora: new Date().toISOString(),
+    mensaje: '🚀 Desplegado automaticamente con GitHub Actions',
+    version: 'v3-demo-cicd',
+    servidor: 'AWS EC2'
+  }, 'Endpoint nuevo desplegado con CI/CD'));
+});
+
 module.exports = router;
