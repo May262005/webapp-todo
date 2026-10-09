@@ -52,7 +52,7 @@ router.get('/status', (req, res) => {
   const listas = db.prepare('SELECT COUNT(*) AS c FROM listas').get().c;
   const tareas = db.prepare('SELECT COUNT(*) AS c FROM tareas').get().c;
   res.json(ok({
-    status: 'OK',
+    status: 'OK uteq',
     uptime: process.uptime(),
     timestamp: new Date().toISOString(),
     listas,
@@ -65,7 +65,7 @@ router.get('/status', (req, res) => {
 router.get('/hora', (req, res) => {
   res.json(ok({
     hora: new Date().toISOString(),
-    mensaje: '🚀 Desplegado automaticamente con GitHub Actions',
+    mensaje: 'Primer demo CI/CD - Pipeline funciona perfecto',
     version: 'v3-demo-cicd',
     servidor: 'AWS EC2'
   }, 'Endpoint nuevo desplegado con CI/CD'));
